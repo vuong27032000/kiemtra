@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function checkSNT(number){
+    for (let i=2;i<number;i++){
+      if (number%i===0){
+        return false;
+      }
+    }
+    return true
+  }
+  function sumOfListPrime(x) {
+    let sum = 2;
+    for (let i=3;i<=x;i++){
+      if (checkSNT){
+        sum+=i;
+      }
+    }
+    return sum
+  }
+  let x = prompt("nhap vao so bat ki:");
+  let result= sumOfListPrime(x);
+  document.write("ketquala:"+result);
+</script>
+</body>
+</html>

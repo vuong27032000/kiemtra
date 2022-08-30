@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function insertNumberToArray(arr,x,index) {
+      if(index<0||index<arr.length){
+          return arr;
+      }else {
+          let arrNew = new Array(arr.length+1)
+          arrNew[index]=x;
+          for(let i = 0;i<arrNew.length;i++){
+              if(i<index){
+                  arrNew[i]=arr[i]
+              }if(i>index){
+                  arrNew[i]=arr[i+1]
+              }return arrNew
+          }
+      }
+  }
+  let x = prompt("nhap vao day")
+  let index =prompt(parseInt("nhap vao 1 so"))
+  let arr = prompt("nhap vao")
+  let result = insertNumberToArray(arr,x,index)
+  document.write(result)
+</script>
+</body>
+</html>
